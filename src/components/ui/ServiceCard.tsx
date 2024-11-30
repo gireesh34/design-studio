@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { theme } from '../../styles/theme';
 import IconWrapper from './IconWrapper';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import Card from './Card';
 
 interface ServiceProps {
   service: {
@@ -16,13 +17,7 @@ const ServiceCard: React.FC<ServiceProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div
-      className="p-6 rounded-lg transition-all duration-300 hover:scale-105"
-      style={{
-        background: 'linear-gradient(135deg, #511557 0%, #030c3c 100%)',
-        border: '1px solid rgba(142, 246, 9, 0.1)',
-      }}
-    >
+    <Card hover variant="dark" className="p-6">
       <IconWrapper icon={service.icon} />
       
       <h3 className="text-xl font-semibold mt-4 mb-2" style={{ color: theme.colors.accent }}>
@@ -45,15 +40,14 @@ const ServiceCard: React.FC<ServiceProps> = ({ service }) => {
           {service.features.map((feature) => (
             <div
               key={feature}
-              className="flex items-center space-x-2 text-white text-sm py-1 px-3 rounded-full"
-              style={{ background: 'rgba(142, 246, 9, 0.1)' }}
+              className="flex items-center space-x-2 text-white text-sm py-1 px-3 rounded-full bg-white/5 backdrop-blur-sm"
             >
               <span>• {feature}</span>
             </div>
           ))}
         </div>
       )}
-    </div>
+    </Card>
   );
 }
 

@@ -3,13 +3,11 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-24 pb-16 md:pt-32 md:pb-24">
+    <section id="home" className="pt-32 pb-24 md:pt-30 md:pb-32">
       <div 
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        style={{ 
-          background: 'linear-gradient(135deg, #511557 0%, #030c3c 100%)',
-          borderRadius: '1rem',
-          padding: '4rem 2rem',
+        style={{
+          padding: '8rem 2rem',  
         }}
       >
         <div className="text-center">

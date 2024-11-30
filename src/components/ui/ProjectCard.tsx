@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
       <div
         className="absolute inset-0 flex flex-col justify-end p-6 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
         style={{
-          background: 'linear-gradient(to top, rgba(3, 12, 60, 0.95) 0%, rgba(3, 12, 60, 0.7) 100%)',
+          background: 'rgba(3, 12, 60, 0.7) 100%)',
         }}
       >
         <div className="transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0">

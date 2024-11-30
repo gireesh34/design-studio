@@ -1,3 +1,90 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background: linear-gradient(135deg, #511557 0%, #030c3c 100%);
+}
+:root {
+    --color-primary: #0a1959;
+    --color-secondary: #030c3c;
+    --color-accent: #8ef609;
+    --glass-light: rgba(10, 25, 89, 0.3);
+    --glass-medium: rgba(10, 25, 89, 0.5);
+    --glass-dark: rgba(10, 25, 89, 0.7);
+  }
+  
+  @layer base {
+    html {
+      scroll-behavior: smooth;
+    }
+  
+    body {
+      @apply bg-[#030c3c] text-white antialiased;
+    }
+  }
+  
+  @layer components {
+    .container-padding {
+      @apply px-4 sm:px-6 lg:px-8;
+    }
+  
+    .section-padding {
+      @apply py-16 md:py-24;
+    }
+  
+    .heading-gradient {
+      background: linear-gradient(135deg, var(--color-accent) 0%, #ffffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    .glass-card {
+      @apply backdrop-blur-md rounded-lg border border-white/10;
+      background: linear-gradient(135deg, var(--glass-light) 0%, var(--glass-medium) 100%);
+    }
+  
+    .glass-card-dark {
+      @apply backdrop-blur-md rounded-lg border border-white/10;
+      background: linear-gradient(135deg, var(--glass-medium) 0%, var(--glass-dark) 100%);
+    }
+  
+    .hover-card {
+      @apply transition-all duration-300 hover:scale-105;
+    }
+  
+    .input-base {
+      @apply mt-1 block w-full rounded-lg p-3;
+      @apply bg-white/5 backdrop-blur-md border border-[#8ef609]/20 text-white;
+      @apply focus:ring-2 focus:ring-[#8ef609] focus:border-transparent;
+    }
+  
+    .button-primary {
+      @apply inline-flex items-center px-6 py-3 rounded-md font-medium;
+      @apply bg-[#8ef609] text-[#030c3c];
+      @apply transition-all duration-300 hover:scale-105;
+      box-shadow: 0 0 20px rgba(142, 246, 9, 0.3);
+    }
+  
+    .button-secondary {
+      @apply inline-flex items-center px-6 py-3 rounded-md font-medium;
+      @apply border border-white/10 text-white backdrop-blur-md;
+      @apply bg-white/5 transition-colors hover:bg-white/10;
+    }
+  
+    .gradient-primary {
+      background: linear-gradient(135deg, var(--glass-light) 0%, var(--color-secondary) 100%);
+    }
+  
+    .gradient-overlay {
+      background: linear-gradient(to top, rgba(3, 12, 60, 0.8) 0%, rgba(3, 12, 60, 0.2) 100%);
+    }
+  
+    .gradient-card {
+      background: linear-gradient(135deg, var(--glass-light) 0%, var(--glass-medium) 100%);
+    }
+  }
+  
+  .glassmorphism {
+    @apply backdrop-blur-md bg-white/5 border border-white/10;
+  }

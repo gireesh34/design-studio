@@ -1,20 +1,25 @@
 import React from 'react';
-import { theme } from '../../styles/theme';
 
 interface CardProps {
   children: React.ReactNode;
   className?: string;
   hover?: boolean;
+  variant?: 'default' | 'dark';
 }
 
-const Card: React.FC<CardProps> = ({ children, className = '', hover = false }) => {
+const Card: React.FC<CardProps> = ({ 
+  children, 
+  className = '', 
+  hover = false,
+  variant = 'default'
+}) => {
   return (
     <div
-      className={`p-6 rounded-lg ${hover ? 'transition-transform hover:scale-105' : ''} ${className}`}
-      style={{ 
-        background: `linear-gradient(135deg, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%)`,
-        border: `1px solid rgba(${theme.colors.accent}, 0.1)`,
-      }}
+      className={`
+        ${variant === 'default' ? 'glass-card' : 'glass-card-dark'}
+        ${hover ? 'hover-card' : ''}
+        ${className}
+      `}
     >
       {children}
     </div>

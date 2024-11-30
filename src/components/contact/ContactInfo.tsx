@@ -22,9 +22,9 @@ const contactDetails = [
 const ContactInfo = () => {
   return (
     <div 
-      className="p-8 rounded-lg space-y-8"
+      className="p-8 rounded-lg space-y-8 glass-card-dark"
       style={{ 
-        background: 'linear-gradient(135deg, #511557 0%, #030c3c 100%)',
+        
         border: '1px solid rgba(142, 246, 9, 0.1)',
       }}
     >
